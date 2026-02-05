@@ -10,3 +10,15 @@ A proposta é documentar:
 – problemas encontrados e soluções
 
 Futuramente, esta área poderá evoluir para automações com scripts.
+
+Dia 1 – Estrutura inicial
+
+Criação da estrutura base de diretórios do laboratório escolar em /srv/escola, ainda sem arquivos.
+
+Foram utilizadas diferentes abordagens:
+– criação manual de diretórios
+– uso de caminhos completos com mkdir
+– reutilização de estruturas de turmas com cp
+
+A estrutura final foi validada com o comando tree.
+
