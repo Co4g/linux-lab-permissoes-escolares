@@ -22,3 +22,32 @@ Foram utilizadas diferentes abordagens:
 
 A estrutura final foi validada com o comando tree.
 
+Dia 2 – Criação de grupos e usuários
+
+Neste dia foi iniciada a modelagem de identidades do sistema, separando usuários por função organizacional.
+
+Foram criados os seguintes grupos:
+– alunos
+– professores
+– coordenacao
+– adm
+– ti
+
+Os usuários foram criados manualmente com useradd, priorizando o entendimento do processo ao invés de automação.
+
+Estratégia adotada:
+– alunos com usuários genéricos por turma (aluno_t1em, aluno_t2em, aluno_t3em)
+– professores com um usuário por disciplina (prof_<disciplina>)
+– coordenação por área
+– administração e TI com usuários individuais
+
+Todos os usuários:
+– possuem diretório home (-m)
+– utilizam /bin/bash como shell
+– foram adicionados aos respectivos grupos com usermod -aG
+– receberam senhas para testes de login
+
+Objetivo desta etapa:
+Estabelecer a base de identidades do sistema antes de aplicar permissões e controle de acesso.
+
+Nenhuma modificação de permissões de diretórios foi realizada nesta fase.
