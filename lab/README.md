@@ -51,3 +51,12 @@ Objetivo desta etapa:
 Estabelecer a base de identidades do sistema antes de aplicar permissões e controle de acesso.
 
 Nenhuma modificação de permissões de diretórios foi realizada nesta fase.
+
+Dia 3: refatoração do controle de acesso e automação de grupos
+
+Neste dia identifiquei que o controle de acesso em sistemas Linux é mais eficiente quando baseado em grupos, e não diretamente em usuários.
+Com isso, alterei a política anterior para um modelo mais granular, criando grupos específicos por função/área (ex: prof_matematica) em vez de apenas grupos genéricos como "professores".
+
+Devido à grande quantidade de grupos necessários, automatizei o processo com pequenos scripts bash, documentados em scripts.md.
+
+Também utilizei um script com rsync para replicar e atualizar rapidamente os conteúdos das turmas dentro dos diretórios das disciplinas, evitando recriação manual. Essa abordagem foi possível por se tratarem de arquivos genéricos; em um ambiente real, esses dados seriam individuais.
